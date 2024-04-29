@@ -4,10 +4,10 @@ const int interval = 1000;
 const int sequence_interval = 2000;
 const int total_rounds = 3;
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(13, OUTPUT);
-  pinMode(12, OUTPUT);
-  pinMode(11, OUTPUT);
+  // put your setup code here, to run once
+      for (int n = 0; n < pin_numbers; n++) {
+      pinMode(leds[n], OUTPUT);
+    }
 }
 
 void led_blink(int led) {
