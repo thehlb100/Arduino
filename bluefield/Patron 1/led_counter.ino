@@ -30,6 +30,7 @@ void setAll(int state) {
 
 /**
  * Animates a reverse loop across the pins.
+ * [int] - State (1 or 0)
 */
 void reverseLoop(int state) {
   for (int i = numPins - 1; i >= 0; i--) {
@@ -42,6 +43,7 @@ void reverseLoop(int state) {
 
 /**
  * Animates a forward loop across the pins.
+ * [int] - State (1 or 0)
 */
 void forwardLoop(int state) {
   for (int n = 0; n < numPins; n++) {
