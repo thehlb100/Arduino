@@ -31,11 +31,11 @@ void setAll(int state) {
 /**
  * Animates a reverse loop across the pins.
 */
-void reverseLoop() {
+void reverseLoop(int state) {
   for (int i = numPins - 1; i >= 0; i--) {
-    digitalWrite(pines[i], 1);
+    digitalWrite(pines[i], !state);
     delay(wait_time);
-    digitalWrite(pines[i - 1], 0);
+    digitalWrite(pines[i - 1], state);
     delay(wait_time);
   }
 }
@@ -43,22 +43,18 @@ void reverseLoop() {
 /**
  * Animates a forward loop across the pins.
 */
-void forwardLoop() {
+void forwardLoop(int state) {
   for (int n = 0; n < numPins; n++) {
-    digitalWrite(pines[n], 1);
+    digitalWrite(pines[n], state);
     delay(wait_time);
-    digitalWrite(pines[n + 1], 0);
+    digitalWrite(pines[n + 1], !state);
     delay(wait_time);
   }
 }
 
 void loop() {
-  forwardLoop();
-  setAll(0);
-  reverseLoop();
-  setAll(0);
-  setAll(1);
-  setAll(0);
+  forwardLoop(1);
+  reverseLoop(1);
   setAll(1);
   setAll(0);
 }
