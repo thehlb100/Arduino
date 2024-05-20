@@ -1,6 +1,6 @@
 // C++ code
 //
-void setup() {
+void setup() { //Configuracion de pines
 	pinMode(13, OUTPUT);
   	pinMode(12, OUTPUT);
   	pinMode(8, OUTPUT);
@@ -11,7 +11,6 @@ void setup() {
 }
 void loop()
 {
-  	delay (1000);
   
   	digitalWrite(13,HIGH);
   	delay (1000);
@@ -37,11 +36,14 @@ void loop()
  	
   	digitalWrite(7, LOW);
   	delay (1000);
+
   	digitalWrite(8, LOW);
    	delay (1000);
+
   	digitalWrite(12, LOW);
   	delay(1000);
-    digitalWrite(13, LOW);
+
+    	digitalWrite(13, LOW);
   	delay(1000);
  
 }

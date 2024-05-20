@@ -5,25 +5,25 @@ const int pAzul = 6; //Configuración entrada RGB azul
 const int pVerde = 5; //Configuración entrada RGB verde
 const int Retraso = 1000; //Configuración delay
 
-void Rojo(){
+void Rojo(){ //Configuracion color rojo
   digitalWrite(pRojo,HIGH);
   digitalWrite(pAzul,LOW);
   digitalWrite(pVerde,LOW);
    delay (Retraso);}
 
-void Verde(){
+void Verde(){ //Configuracion color verde
   digitalWrite(pRojo,LOW);
   digitalWrite(pAzul,LOW);
   digitalWrite(pVerde,HIGH);
   delay (Retraso);}
  
-void Azul(){
+void Azul(){ //Configuracion color azul
   digitalWrite(pRojo,LOW);
   digitalWrite(pAzul,HIGH);
   digitalWrite (pVerde,LOW);
   delay (Retraso);}
 
-void Blanco(){
+void Blanco(){ //Configuracion color blanco
   digitalWrite(pRojo,HIGH);
   digitalWrite(pAzul,HIGH);
   digitalWrite(pVerde,HIGH);
@@ -37,7 +37,7 @@ void setup()
   pinMode(pVerde, OUTPUT);
 }
 
-void loop()
+void loop() //Configuracion patron de colores
 {  
  Rojo();
  Verde();

@@ -1,6 +1,6 @@
 // C++ code
 //
-void setup() {
+void setup() { //Configuracion de pines
 	pinMode(13, OUTPUT);
   	pinMode(12, OUTPUT);
   	pinMode(8, OUTPUT);
@@ -9,7 +9,7 @@ void setup() {
   
   
 }
-void loop()
+void loop() //Configuracion de patron
 {
   	delay (1000);
   
